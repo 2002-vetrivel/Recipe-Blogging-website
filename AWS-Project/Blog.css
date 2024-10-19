@@ -1,0 +1,353 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #D9CEC0;
+    color: #2E2A25;
+    font-family: 'Playfair Display', serif;
+}
+
+#Navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 30px;
+}
+
+#logos {
+    font-family: "REM", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+    font-weight: lighter;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: 1s;
+}
+
+.nav-links a:hover {
+    font-size: 16px;
+    transition: 1s;
+}
+
+#food {
+    padding: 20px;
+    font-family: "Great Vibes", cursive;
+    font-weight: 500;
+    font-size: 40px;
+    text-align: left;
+}
+
+#banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    padding: 20px;
+}
+
+#banner img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    opacity: 0.7;
+}
+
+#bannerContent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    padding: 20px;
+    text-align: center;
+}
+
+#banner h1 {
+    font-family: "Great Vibes", cursive;
+    font-weight: 400;
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+#banner h2 {
+    font-family: "Fraunces", serif;
+    font-weight: 500;
+    font-size: 200px;
+    color: ghostwhite;
+    transition: 2s;
+}
+
+#banner h2:hover {
+    color: black;
+    transition: 2s;
+}
+
+#creationContainer h1 {
+    padding: 20px;
+    font-family: "Fraunces", serif;
+    font-weight: 500;
+    font-size: 60px;
+    text-align: left;
+}
+
+#creationContainer {
+    padding: 30px;
+    border: 0.5px solid grey;
+    margin: 0px 150px;
+}
+
+.creation {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+
+.creation-image {
+    flex: 0 0 auto; /* Prevent shrinking */
+    width: 100%; /* Allow it to expand */
+    max-width: 300px; /* Set a maximum width */
+    aspect-ratio: 1; /* Maintain a 1:1 aspect ratio */
+}
+#allpostcontainer h1 
+{
+    padding: 30px;
+    font-size: 50px;
+}
+.creation-image img {
+    width: 100%; /* Make the image fill the container */
+    height: 100%; /* Ensure height matches aspect ratio */
+    object-fit: cover; /* Crop the image to fill the container */
+    border-radius: 30px;
+}
+
+.creation-content {
+    margin-left: 30px;
+    max-width: 600px;
+}
+
+.creation-content h3 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.creation-content p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+#Follow h1 {
+    padding: 20px;
+    font-family: "Fraunces", serif;
+    font-weight: 500;
+    font-size: 80px;
+    text-align: left;
+}
+
+#containerFollow {
+    margin: 20px 200px;
+    padding: 40px;
+    border: 0.5px solid grey;
+}
+
+/* Tablet and small desktop styles */
+@media (max-width: 1200px) {
+    #banner h2 {
+        font-size: 120px;
+    }
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    #banner h1 {
+        font-size: 40px;
+    }
+
+    #banner h2 {
+        font-size: 70px;
+        margin-top: 50px;
+    }
+
+    .creation {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .creation-content {
+        margin-left: 0; /* Remove left margin for better centering */
+        text-align: center; /* Center text for better readability */
+        max-width: 100%; /* Allow full width on mobile */
+    }
+
+    .creation-image {
+        margin-bottom: 20px; /* Add space between image and content */
+    }
+
+    .creation-image img {
+        width: 100%; /* Full width for images on mobile */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    #creationContainer {
+        margin: 10px; /* Reduced margin for mobile */
+    }
+}
+
+/* Small mobile styles */
+@media (max-width: 480px) {
+    #banner h1 {
+        font-size: 30px;
+    }
+
+    #banner h2 {
+        font-size: 60px; /* Adjusted font size for smaller devices */
+    }
+
+    #bannerContent p {
+        font-size: 12px; /* Increased font size for better readability */
+        max-width: 100%; /* Full width for paragraph text */
+    }
+}
+
+#footer {
+    padding: 30px;
+    margin: 0px 150px;
+    display: flex;
+    justify-content: space-between;
+    row-gap: 30px;
+    border-top: 1px solid #2E2A25;
+}
+
+#footerleft, #footerright {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+#footerright {
+    text-align: right;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.7); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #D9CEC0;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 50px;
+    border: 1px solid #888;
+    border-radius: 30px;
+    width: 50%; /* Could be more or less, depending on screen size */
+}
+.modal-content h2{
+    text-align: center;
+    font-family: "Fraunces", serif;
+    font-weight: 500;
+    font-size: 50px;
+    margin: 10px;
+}
+.modal-content h3 
+{
+    font-family: "Roboto", sans-serif;
+    margin: 20px;
+    text-decoration: underline;
+}
+.modal-content li
+{
+    font-family: "Quicksand", sans-serif;
+    margin: 20px;
+}
+.modal-content img 
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    border-radius: 10px;
+    top: 10px;
+}
+.recipe-btn
+{
+    padding: 10px;
+    border-radius: 10px;
+    border: 0.5px solid grey;
+    font-size: 15px;
+    font-weight: 600;
+    font-style: italic;
+    cursor: pointer;
+
+}
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    #footer {
+        margin: 10px; /* Adjusted margin for footer on mobile */
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    #footerleft, #footerright {
+        text-align: center; /* Center align footer content */
+        margin-bottom: 20px;
+    }
+    .modal-content h2{
+        text-align: center;
+        font-family: "Fraunces", serif;
+        font-weight: 500;
+        font-size: 30px;
+        margin: 10px;
+    }
+    .modal-content h3 
+    {
+        margin: 10px;
+        margin-bottom: 15px;
+    }
+    .modal-content li 
+    {
+        margin: 10px;
+    }
+    .modal-content img 
+    {
+        width:80%;
+    }
+}
